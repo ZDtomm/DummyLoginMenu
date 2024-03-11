@@ -1,0 +1,162 @@
+.form-login {
+    margin-top: 60px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    height: 640px;
+  }
+
+.logo {
+    margin-top: -70px;
+    margin-left: 20px;
+}
+
+.sign {
+    margin-top: -55px;
+    margin-left: 20px;
+    margin-bottom: 25px;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.email {
+    margin-left: 20px;
+    margin-bottom: 20px;
+    width: 323px;
+}
+
+.password {
+    margin-left: 20px;
+    width: 323px;
+}
+
+.btn-login {
+    margin-top: 40px;
+    margin-left: 20px;
+    width: 323px;
+}
+
+.login-google {
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 323px;
+    background-color: #fff !important;
+    color: #007bff !important;
+    font-size: 12px;
+    border: 1px solid #007bff;
+    display: inline-flex;
+    align-items: center; 
+    justify-content: center;
+    padding: 8px 16px; 
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.login-google:hover{
+    font-weight: bold;
+}
+.login-google .image-google {
+    height: 25px;
+    padding-right: 11px;
+}
+
+.separator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 20px 0;
+}
+  
+.line {
+    flex: 1;
+    border: none;
+    border-top: 3px solid #ccc;
+    width: 323px;
+}
+  
+.or {
+    margin: 0 10px;
+    color: #777;
+}
+
+.lain-lain{
+    margin-top: 30px;
+    font-size: 14px;
+    margin-left: 80px;
+    color: #007bff;
+}
+.footer-text {
+    text-align: center;
+    margin-top: 700px;
+    font-size: 12px;
+}
+
+.dropdown-bahasa {
+    margin-top: 20px;
+    margin-left: 485px;
+}
+
+.dropdown-toggle {
+    background-color: #fff !important;
+    color: #000 !important;
+    border: 1px solid blue;
+}
+
+.dropdown-menu {
+    background-color: #fff;
+    color: #000;
+}
+  
+.dropdown-item {
+    color: black;
+}
+  
+.dropdown-item:focus,
+.dropdown-item:hover {
+  background-color: #007bff !important;
+  color: #000 !important;
+}
+
+.dropdown-toggle:hover {
+    color: black;
+}
+
+.dropdown-toggle:focus {
+    background-color: #fff !important;
+    color: #000 !important;
+    box-shadow: none !important;
+  }
+  
+.dropdown-toggle:focus:active {
+    background-color: #fff !important;
+    color: #000 !important;
+}
+
+
+.mekari-logo {
+    margin-left: 508px;
+    margin-top: 20px;
+}
+
+.quetoe h3{
+    margin-top: 20px;
+    font-size: 12px;
+    font-weight: small;
+    margin-left: 420px;
+}
+
+.hakcipta h3{
+    margin-top: 5px;
+    font-size: 12px;
+    font-weight: small;
+    margin-left: 477px;
+}
