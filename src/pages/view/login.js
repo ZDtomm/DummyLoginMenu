@@ -1,13 +1,44 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Container, Form, Button , Image, Dropdown} from 'react-bootstrap';
 import "../css/login.css"
 
 function Login() {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
     const handleGoogleLogin = () => {
       // Tambahkan kode untuk login dengan Google di sini
       console.log('Login with Google');
     };
-  
+    
+    const handleSignIn = async () => {
+      try {
+
+          const userData = {
+            email: email,
+            password: password
+          };
+    
+        const response = await fetch('http://localhost:8080/api/phising', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(userData)
+        });
+
+        if (response.ok) {
+          alert('Selamat anda terkena Phising!!!');
+        } else {
+          console.error('Gagal melakukan sign-in:', response.statusText);
+          alert('Gagal melakukan sign-in');
+        }
+      } catch (error) {
+        console.error('Error:', error);
+        alert('Terjadi kesalahan saat melakukan sign-in');
+      }
+    };
+    
     return (
       <Container>
         <Form className='form-login'>
@@ -17,15 +48,17 @@ function Login() {
         <h2 className='sign'>Sign in</h2>
           <Form.Group className='email' controlId="formBasicEmail">
             <Form.Label>Email</Form.Label>
-            <Form.Control type="email" placeholder=""/>
+            <Form.Control type="email" placeholder="" value={email}
+            onChange={(e) => setEmail(e.target.value)}/>
           </Form.Group>
   
           <Form.Group className='password' controlId="formBasicPassword">
             <Form.Label>Password</Form.Label>
-            <Form.Control type="password" placeholder=""/>
+            <Form.Control type="password" placeholder="" value={password}
+            onChange={(e) => setPassword(e.target.value)}/>
           </Form.Group>
         
-          <Button className='btn-login' variant="primary" type="submit">
+          <Button className='btn-login' variant="primary" type="submit" onClick={handleSignIn}>
             Sign in
           </Button>
 
